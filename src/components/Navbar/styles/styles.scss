@@ -1,0 +1,47 @@
+.navbar {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: rgba(245, 245, 245, 0.4);
+  backdrop-filter: blur(35px);
+  position: sticky;
+  top: 0;
+}
+
+button.title {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button.title span {
+  color: royalblue !important;
+}
+
+button.title h1 {
+  font-weight: bold;
+  color: rgb(42, 42, 42);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.buttons button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  text-decoration: underline;
+}

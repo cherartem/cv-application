@@ -1,0 +1,53 @@
+.about-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.header hr {
+  height: 2px;
+  border: none;
+  background: royalblue;
+}
+
+.header h1 {
+  color: royalblue;
+  font-size: 3rem;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-block p {
+  line-height: 2;
+}
+
+.about-block h3 {
+  color: royalblue;
+}
+
+.about-block ul {
+  margin-left: 20px;
+}
+
+.credits {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
+
+.credits a {
+  font-size: 2rem;
+  color: rgb(39, 39, 39);
+}

@@ -1,0 +1,56 @@
+.container {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.paper-sheet {
+  width: 60vw;
+  aspect-ratio: 1 / 1.414;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tip {
+  color: rgb(113, 113, 113);
+}
+
+.final-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.final-buttons-container button {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.final-buttons-container button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.final-buttons-container button:nth-child(1) {
+  background: rgb(255, 53, 53);
+}
+
+.final-buttons-container button:nth-child(2) {
+  background: royalblue;
+}

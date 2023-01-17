@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="navbar">

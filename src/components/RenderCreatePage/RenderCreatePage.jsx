@@ -1,11 +1,14 @@
 import { Component } from 'react';
 import './styles/styles.css';
 import ReactToPrint from 'react-to-print';
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { Tip } from './components/Tip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
 import { faRemove } from '@fortawesome/free-solid-svg-icons';
+import { General } from './components/General';
+import { Skills } from './components/Skills';
+import { Experience } from './components/Experience';
+import { Education } from './components/Education';
+import { Projects } from './components/Projects';
 
 class RenderCreatePage extends Component {
   constructor() {
@@ -20,14 +23,13 @@ class RenderCreatePage extends Component {
   render () {
     return (
       <div className="container">
-        <Tip/>
-        <TransformWrapper defaultScale={1} defaulPositionX={100} defaultPositionY={100}>
-          <TransformComponent>
-            <div className="paper-sheet" ref={el => (this.componentRef = el)}>
-              <h1>Hello world</h1>
-            </div>
-          </TransformComponent>
-        </TransformWrapper>
+        <div className="paper-sheet" ref={el => (this.componentRef = el)}>
+          <General/>
+          <Skills/>
+          <Experience/>
+          <Education/>
+          <Projects/>
+        </div>
         <div className="final-buttons-container">
           <button><FontAwesomeIcon icon={faRemove} />Reset All</button>
           <ReactToPrint

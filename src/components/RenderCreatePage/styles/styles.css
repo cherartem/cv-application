@@ -15,13 +15,9 @@
   width: 60vw;
   aspect-ratio: 1/1.414;
   background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tip {
-  color: rgb(113, 113, 113);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 25px;
 }
 
 .final-buttons-container {
@@ -55,4 +51,17 @@
 
 .final-buttons-container button:nth-child(2) {
   background: royalblue;
+}
+
+.editable-component {
+  outline: rgba(65, 105, 225, 0) solid 2px;
+  transition: all 200ms ease-in-out;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.editable-component:hover {
+  box-sizing: border-box;
+  outline: royalblue solid 2px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }/*# sourceMappingURL=styles.css.map */

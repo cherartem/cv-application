@@ -15,7 +15,6 @@
   background: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr;
-  
   padding: 25px;
 }
 
@@ -52,15 +51,31 @@
   background: royalblue;
 }
 
-.editable-component {
-  outline: rgba(65, 105, 225, 0) solid 2px;
-  transition: all 200ms ease-in-out;
-  border-radius: 5px;
-  padding: 5px;
+.general {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.editable-component:hover {
-  box-sizing: border-box;
-  outline: royalblue solid 2px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.fullNameContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullNameContainer p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.fullNameContainer input {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  border-bottom: 2px solid royalblue;
 }

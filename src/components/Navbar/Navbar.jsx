@@ -13,8 +13,12 @@ class Navbar extends Component {
       <div className="navbar">
         <button className="title" onClick={() => window.location.reload()}><h1><span><FontAwesomeIcon icon={faFile} /></span> AceCV</h1></button>
         <div className="buttons">
-          <button><h2>Create</h2></button>
-          <button><h2>About</h2></button>
+          <button
+            onClick={() => this.props.createPage()}
+          ><h2>Create</h2></button>
+          <button
+            onClick={() => this.props.infoPage()}
+          ><h2>About</h2></button>
         </div>
       </div>
     );

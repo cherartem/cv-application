@@ -1,83 +1,93 @@
 .container {
-  width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  flex-direction: column;
-  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  padding: 25px;
+  gap: 25px;
+  position: relative;
 }
 
-.paper-sheet {
-  width: 60vw;
-  aspect-ratio: 1/1.414;
-  background: rgb(255, 255, 255);
-  display: grid;
-  grid-template-columns: 1fr;
+.showcase {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  aspect-ratio: 1/1.41;
   padding: 25px;
 }
 
-.final-buttons-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.final-buttons-container button {
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.final-buttons-container button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.final-buttons-container button:nth-child(1) {
-  background: rgb(255, 53, 53);
-}
-
-.final-buttons-container button:nth-child(2) {
-  background: royalblue;
-}
-
-.general {
+.paper-sheet {
+  height: 100%;
   width: 100%;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1.2em;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  justify-content: flex-start;
+  gap: 1.2em;
 }
 
-.fullNameContainer {
-  width: 100%;
+.showcase-general {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.general-side-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.general-side-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.general-side-left p {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.general-side-right p {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.name {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.fullNameContainer p {
+.name p {
   font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.showcase-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  width: 100%;
+}
+
+.skills-header p {
+  font-size: 1.1rem !important;
   font-weight: 600;
 }
 
-.fullNameContainer input {
-  font-size: 1.5rem;
-  font-weight: 600;
+.skills-header hr {
   border: none;
-  background: none;
-  border-bottom: 2px solid royalblue;
+  border: 1px solid black;
+}
+
+.showcase-skills p {
+  font-size: 0.8rem;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

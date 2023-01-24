@@ -22,10 +22,11 @@
   width: 100%;
   background: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 1.2em;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
-  gap: 1.2em;
+  justify-content: space-between;
+  gap: 1vw;
 }
 
 .showcase-general {
@@ -36,7 +37,7 @@
 .general-side-left {
   display: flex;
   flex-direction: column;
-  gap: 0.2em;
+  gap: 0.2vw;
   align-items: flex-start;
   justify-content: center;
 }
@@ -44,18 +45,18 @@
 .general-side-right {
   display: flex;
   flex-direction: column;
-  gap: 0.2em;
+  gap: 0.2vw;
   align-items: flex-end;
   justify-content: center;
 }
 
 .general-side-left p {
-  font-size: 0.7rem;
+  font-size: 0.8vw;
   font-weight: 400;
 }
 
 .general-side-right p {
-  font-size: 0.7rem;
+  font-size: 0.8vw;
   font-weight: 400;
 }
 
@@ -66,28 +67,96 @@
 }
 
 .name p {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: 700;
 }
 
 .showcase-skills {
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 0.5vw;
   width: 100%;
 }
 
-.skills-header p {
-  font-size: 1.1rem !important;
+.sector-header p {
+  font-size: 1.3vw !important;
   font-weight: 600;
 }
 
-.skills-header hr {
+.sector-header hr {
   border: none;
   border: 1px solid black;
 }
 
 .showcase-skills p {
-  font-size: 0.8rem;
+  font-size: 0.9vw;
   width: 100%;
+}
+
+.showcase-education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.ed-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+}
+
+p#u-title {
+  font-weight: 600;
+  font-size: 0.9vw;
+}
+
+.duration-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.duration-location p {
+  color: gray;
+  font-size: 0.9vw;
+}
+
+.showcase-work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.w-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+}
+
+p#w-title {
+  font-weight: 600;
+  font-size: 0.9vw;
+}
+
+.description {
+  margin-left: 2vw;
+  display: flex;
+  gap: 0.3vw;
+  flex-direction: column;
+}
+
+.description li {
+  font-size: 0.9vw;
 }/*# sourceMappingURL=styles.css.map */

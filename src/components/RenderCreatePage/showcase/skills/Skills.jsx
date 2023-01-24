@@ -4,7 +4,7 @@ export class Skills extends Component {
   render() {
     return (
       <div className="showcase-skills">
-        <div className="skills-header">
+        <div className="sector-header">
           <p>Skills</p>
           <hr />
         </div>

@@ -2,7 +2,7 @@ import { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -26,7 +26,7 @@ export class General extends Component {
         <div className="general-side-right">
           <p>{this.props.data.email} <FontAwesomeIcon icon={faEnvelope} /></p>
           <p>{this.props.data.address} <FontAwesomeIcon icon={faLocationDot} /></p>
-          <p>{this.props.data.phoneNumber} <FontAwesomeIcon icon={faPhoneSquare} /></p>
+          <p>{this.props.data.phoneNumber} <FontAwesomeIcon icon={faPhone} /></p>
         </div>
       </div>
     );

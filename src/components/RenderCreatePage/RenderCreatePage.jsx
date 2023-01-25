@@ -4,6 +4,7 @@ import { Education } from './showcase/education/Education';
 import { General } from './showcase/general/General';
 import { Skills } from './showcase/skills/Skills';
 import { WorkExperience } from './showcase/workExperience/WorkExperience';
+import { Main } from './forms/main';
 
 class RenderCreatePage extends Component {
   constructor() {
@@ -80,9 +81,8 @@ class RenderCreatePage extends Component {
     return (
       <div className="container">
         <div className="form-container">
-          
+          <Main/>
         </div>
-
         <div className="showcase">
           <div className="paper-sheet">
             <General data={this.state.general} />

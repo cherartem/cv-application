@@ -11,25 +11,25 @@ export class DefaultMenu extends Component {
     return (
       <div className="default-form-menu">
         <button
-          onClick={this.props.changeState('general')}
+          onClick={() => this.props.changeState('general')}
         >
           <FontAwesomeIcon icon={faUser} />
           <p>General</p>
         </button>
         <button
-          onClick={this.props.changeState('skills')}
+          onClick={() => this.props.changeState('skills')}
         >
           <FontAwesomeIcon icon={faScrewdriverWrench} />
           <p>Skills</p>
         </button>
         <button
-          onClick={this.props.changeState('education')}
+          onClick={() => this.props.changeState('education')}
         >
           <FontAwesomeIcon icon={faUserGraduate} />
           <p>Education</p>
         </button>
         <button
-          onClick={this.props.changeState('workExperience')}
+          onClick={() => this.props.changeState('workExperience')}
         >
           <FontAwesomeIcon icon={faBriefcase} />
           <p>Work experience</p>

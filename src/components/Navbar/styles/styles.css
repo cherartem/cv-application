@@ -8,28 +8,33 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 15px;
-  background: rgba(245, 245, 245, 0.4);
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  background: rgba(219, 227, 255, 0.2);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-bottom: 1px solid white;
 }
 
 button.title {
   border: none;
   background: none;
   cursor: pointer;
+  background: rgb(219, 228, 255);
+  padding: 1vh;
+  border-radius: 1vh;
 }
 
 button.title span {
-  color: royalblue !important;
+  color: rgb(139, 168, 255) !important;
 }
 
 button.title h1 {
   font-weight: bold;
-  color: rgb(42, 42, 42);
+  color: rgb(59, 72, 110);
 }
 
 .buttons {

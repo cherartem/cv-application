@@ -13,18 +13,14 @@ export class Main extends Component {
     this.setState({ page: newState });
   }
 
-  renderDefault = () => {
-    return (
-      <div className="form-content">
-        <h1>Set up your CV:</h1>
-        <DefaultMenu changeState={this.handlePageStateChange} />
-      </div>
-    );
-  }
-
   handleRender = () => {
     if (this.state.page === 'default') {
-      return this.renderDefault();
+      return (
+        <div className="form-content">
+          <h1>Set up your CV:</h1>
+          <DefaultMenu changeState={this.handlePageStateChange} />
+        </div>
+      );
     }
   }
 

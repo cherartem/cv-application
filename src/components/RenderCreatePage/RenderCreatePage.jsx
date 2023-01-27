@@ -19,7 +19,9 @@ class RenderCreatePage extends Component {
         githubLink: 'https://github.com/TemaTech',
         personalWebsite: 'https://github.com/TemaTech'
       },
-      skills: 'JavaScript, React.js, HTML, CSS, SASS, Webpack, Babel, Node, npm, git, GitHub, Web Development, Frontend development',
+      skills: {
+        skillsList: 'JavaScript, React.js, HTML, CSS, SASS, Webpack, Babel, Node, npm, git, GitHub, Web Development, Frontend development',
+      },
       education: {
         ed1: {
           uName: 'University of Washington',
@@ -77,16 +79,20 @@ class RenderCreatePage extends Component {
     }
   }
 
+  handleStateChange = (state, newData) => {
+    this.setState({ [state]: newData });
+  }
+
   render () {
     return (
       <div className="container">
-        <div className="form-container">
-          <Main/>
+        <div className="content">
+          <Main getState={this.state} handleStateChange={this.handleStateChange} />
         </div>
         <div className="showcase">
           <div className="paper-sheet">
             <General data={this.state.general} />
-            <Skills data={this.state.skills} />
+            <Skills data={this.state.skills.skillsList} />
             <Education data={this.state.education} />
             <WorkExperience data={this.state.workExperience} />
           </div>

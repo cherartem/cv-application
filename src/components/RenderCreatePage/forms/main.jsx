@@ -1,9 +1,12 @@
 import { Component } from "react";
 import { DefaultMenu } from "./defaultMenu";
+import { GeneralMenu } from "./GeneralMenu";
+import { ReturnButton } from "./ReturnButton";
+import { SkillsMenu } from "./SkillsMenu";
 
 export class Main extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       page: 'default'
     }
@@ -19,6 +22,21 @@ export class Main extends Component {
         <div className="form-content">
           <h1>Set up your CV:</h1>
           <DefaultMenu changeState={this.handlePageStateChange} />
+          <button id="download-btn">Download your CV in PDF</button>
+        </div>
+      );
+    } else if (this.state.page === 'general') {
+      return (
+        <div className="form-content">
+          <ReturnButton changeState={this.handlePageStateChange} />
+          <GeneralMenu getState={this.props.getState} handleStateChange={this.props.handleStateChange} />
+        </div>
+      )
+    } else if (this.state.page === 'skills') {
+      return (
+        <div className="form-content">
+          <ReturnButton changeState={this.handlePageStateChange} />
+          <SkillsMenu getState={this.props.getState} handleStateChange={this.props.handleStateChange} />
         </div>
       );
     }

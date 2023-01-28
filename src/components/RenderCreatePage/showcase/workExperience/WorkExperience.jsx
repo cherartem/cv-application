@@ -5,16 +5,6 @@ export class WorkExperience extends Component {
     super(props);
   }
 
-  renderDesc = (object) => {
-    const result = [];
-    for (let obj in object) {
-      result.push(
-        <li key={obj}>{object[obj]}</li>
-      );
-    }
-    return result;
-  }
-
   renderWork = () => {
     const result = [];
     for (let obj in this.props.data) {
@@ -26,7 +16,7 @@ export class WorkExperience extends Component {
             <p>{this.props.data[obj].location}</p>
           </div>
           <ul className="description">
-            {this.renderDesc(this.props.data[obj].description)}
+            <li>{this.props.data[obj].description}</li>
           </ul>
         </div>
       );

@@ -15,7 +15,7 @@ class Navbar extends Component {
         <div className="buttons">
           <button
             onClick={() => this.props.createPage()}
-          ><h2>Create</h2></button>
+          ><h2>Set up your CV</h2></button>
           <button
             onClick={() => this.props.infoPage()}
           ><h2>About</h2></button>

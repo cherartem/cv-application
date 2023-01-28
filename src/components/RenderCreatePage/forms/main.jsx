@@ -1,8 +1,10 @@
 import { Component } from "react";
 import { DefaultMenu } from "./defaultMenu";
+import { EducationMenu } from "./EducationMenu";
 import { GeneralMenu } from "./GeneralMenu";
 import { ReturnButton } from "./ReturnButton";
 import { SkillsMenu } from "./SkillsMenu";
+import { WorkExperienceMenu } from "./WorkExperienceMenu";
 
 export class Main extends Component {
   constructor(props) {
@@ -37,6 +39,20 @@ export class Main extends Component {
         <div className="form-content">
           <ReturnButton changeState={this.handlePageStateChange} />
           <SkillsMenu getState={this.props.getState} handleStateChange={this.props.handleStateChange} />
+        </div>
+      );
+    } else if (this.state.page === 'education') {
+      return (
+        <div className="form-content">
+          <ReturnButton changeState={this.handlePageStateChange} />
+          <EducationMenu getState={this.props.getState} handleStateChange={this.props.handleStateChange} />
+        </div>
+      );
+    } else if (this.state.page === 'workExperience') {
+      return (
+        <div className="form-content">
+          <ReturnButton changeState={this.handlePageStateChange} />
+          <WorkExperienceMenu getState={this.props.getState} handleStateChange={this.props.handleStateChange} />
         </div>
       );
     }

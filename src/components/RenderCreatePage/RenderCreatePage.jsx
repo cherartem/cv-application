@@ -11,71 +11,28 @@ class RenderCreatePage extends Component {
     super();
     this.state = {
       general: {
-        name: 'Chernysh Artem',
-        email: 'artem138927@gmail.com',
-        phoneNumber: '+1 123 1234',
-        address: 'San Francisco, CA',
-        linkedInLink: 'https://github.com/TemaTech',
-        githubLink: 'https://github.com/TemaTech',
-        personalWebsite: 'https://github.com/TemaTech'
+        name: '',
+        email: '',
+        phoneNumber: '',
+        address: '',
+        linkedInLink: '',
+        githubLink: '',
+        personalWebsite: ''
       },
       skills: {
-        skillsList: 'JavaScript, React.js, HTML, CSS, SASS, Webpack, Babel, Node, npm, git, GitHub, Web Development, Frontend development',
+        skillsList: '',
       },
-      education: {
-        ed1: {
-          uName: 'University of Washington',
-          major: 'B.S., Computer Science',
-          started: 'August 2004',
-          finished: 'May 2008',
-          location: 'Seattle, WA'
-        },
-        ed2: {
-          uName: 'University of Washington',
-          major: 'B.S., Computer Science',
-          started: 'August 2004',
-          finished: 'May 2008',
-          location: 'Seattle, WA'
+      education: [],
+      workExperience: [
+        {
+          companyName: 'Twitter',
+          title: 'Senior Software Engineer',
+          started: 'October 2016',
+          finished: 'current',
+          location: 'San Francisco, CA',
+          description: 'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design'
         }
-      },
-      workExperience: {
-        w1: {
-          companyName: 'Twitter',
-          title: 'Senior Software Engineer',
-          started: 'October 2016',
-          finished: 'current',
-          location: 'San Francisco, CA',
-          description: [
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design',
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design',
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design'
-          ]
-        },
-        w2: {
-          companyName: 'Twitter',
-          title: 'Senior Software Engineer',
-          started: 'October 2016',
-          finished: 'current',
-          location: 'San Francisco, CA',
-          description: [
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design',
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design',
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design'
-          ]
-        },
-        w3: {
-          companyName: 'Twitter',
-          title: 'Senior Software Engineer',
-          started: 'October 2016',
-          finished: 'current',
-          location: 'San Francisco, CA',
-          description: [
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design',
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design',
-            'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design'
-          ]
-        },
-      }
+      ]
     }
   }
 

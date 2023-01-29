@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { EducationComponent } from "./EducationComponent";
+import { v4 as uuidv4 } from 'uuid';
 
 export class EducationMenu extends Component {
   constructor(props) {
@@ -18,28 +19,28 @@ export class EducationMenu extends Component {
 
   newEdObj = () => {
     const educationRef = this.props.getState.education;
-    educationRef.push(this.edFactory());
+    educationRef.push({
+      ...this.edFactory(),
+      id: uuidv4()
+    });
     this.props.handleStateChange(this.props.getState, educationRef);
   }
 
   removeEdObj = (index) => {
     const educationRef = this.props.getState.education;
-    educationRef.splice(educationRef[index], 1);
+    educationRef.splice(index, 1);
     this.props.handleStateChange(this.props.getState, educationRef);
   }
 
   renderEdComponents = () => {
-    const result = [];
-    for (let i = 0; i < this.props.getState.education.length; i++) {
-      result.push(
-        <div key={i} className="ed-container">
-          <EducationComponent index={i} getState={this.props.getState.education[i]} handleStateChange={this.props.handleStateChange} />
-          <button onClick={this.removeEdObj}>Remove</button>
-        </div>
-      );
-    }
-    return result;
-  }
+    const educationRef = this.props.getState.education;
+    return educationRef.map((education, index) => (
+      <div key={education.id} className="ed-container">
+        <EducationComponent index={index} getState={education} handleStateChange={this.props.handleStateChange} />
+        <button onClick={() => this.removeEdObj(index)}>Remove</button>
+      </div>
+    ));
+  }  
 
   render() {
     return (

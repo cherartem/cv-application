@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { WorkComponent } from "./WorkComponent";
+import { v4 as uuidv4 } from 'uuid';
 
 export class WorkExperienceMenu extends Component {
   constructor(props) {
@@ -19,27 +20,27 @@ export class WorkExperienceMenu extends Component {
 
   newWorkObj = () => {
     const workRef = this.props.getState.workExperience;
-    workRef.push(this.workFactory());
+    workRef.push({
+      ...this.workFactory(),
+      id: uuidv4()
+    });
     this.props.handleStateChange(this.props.getState, workRef);
   }
 
   removeWorkObj = (index) => {
     const workRef = this.props.getState.workExperience;
-    workRef.splice(workRef[index], 1);
+    workRef.splice(index, 1);
     this.props.handleStateChange(this.props.getState, workRef);
   }
 
   renderWorkComponents = () => {
-    const result = [];
-    for (let i = 0; i < this.props.getState.workExperience.length; i++) {
-      result.push(
-        <div key={i} className="work-container">
-          <WorkComponent index={i} getState={this.props.getState.workExperience[i]} handleStateChange={this.props.handleStateChange} />
-          <button onClick={this.removeWorkObj}>Remove</button>
-        </div>
-      );
-    }
-    return result;
+    const workExperienceRef = this.props.getState.workExperience;
+    return workExperienceRef.map((work, index) => (
+      <div key={work.id} className="work-container">
+        <WorkComponent index={index} getState={work} handleStateChange={this.props.handleStateChange} />
+        <button onClick={() => this.removeWorkObj(index)}>Remove</button>
+      </div>
+    ));
   }
 
   render() {

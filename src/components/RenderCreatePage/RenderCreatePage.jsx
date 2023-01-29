@@ -23,16 +23,7 @@ class RenderCreatePage extends Component {
         skillsList: '',
       },
       education: [],
-      workExperience: [
-        {
-          companyName: 'Twitter',
-          title: 'Senior Software Engineer',
-          started: 'October 2016',
-          finished: 'current',
-          location: 'San Francisco, CA',
-          description: 'Built and maintained application that scaled to 2M daily users, communicating with cross-functional teams regarding product and design'
-        }
-      ]
+      workExperience: []
     }
   }
 

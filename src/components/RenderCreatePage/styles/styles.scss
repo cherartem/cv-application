@@ -22,8 +22,8 @@
   padding: 2vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1vw;
+  justify-content: flex-start;
+  gap: 2vw;
 }
 
 .showcase-general {
@@ -168,25 +168,28 @@ p#w-title {
   font-size: .9vw;
 }
 
-.form-container {
-  width: 100%;
-  height: 100%;
+.content {
   position: relative;
+}
+
+.form-container {
+  position: fixed;
+  width: 48vw;
+  height: 100%;
   display: flex;
   align-items: flex-start;
 }
 
 .form-content {
-  position: sticky;
   height: 85vh;
   width: 100%;
-  top: 11vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 10vh;
+  padding: 3vw;
   gap: 5vh;
+  overflow-y: auto;
 }
 
 .form-content h1 {

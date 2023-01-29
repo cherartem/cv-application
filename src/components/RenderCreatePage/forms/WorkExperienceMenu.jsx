@@ -38,7 +38,7 @@ export class WorkExperienceMenu extends Component {
     return workExperienceRef.map((work, index) => (
       <div key={work.id} className="work-container">
         <WorkComponent index={index} getState={work} handleStateChange={this.props.handleStateChange} />
-        <button onClick={() => this.removeWorkObj(index)}>Remove</button>
+        <button id="rm-w-btn" onClick={() => this.removeWorkObj(index)}>Remove</button>
       </div>
     ));
   }
@@ -49,7 +49,7 @@ export class WorkExperienceMenu extends Component {
         <div className="work-list">
           {this.renderWorkComponents()}
         </div>
-        <button onClick={this.newWorkObj} >New</button>
+        <button id="new-w-btn" onClick={this.newWorkObj} >+ Add</button>
       </div>
     );
   }

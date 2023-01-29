@@ -9,14 +9,16 @@ export class SkillsMenu extends Component {
   render() {
     return (
       <div className="skills-form-menu">
-        <label htmlFor="skills-textarea">Skills for this job position</label>
-        <Textarea
-          htmlId="skills-textarea"
-          getState={this.props.getState.skills}
-          handleStateChange={this.props.handleStateChange}
-          value={this.props.getState.skills.skillsList}
-          edit='skillsList'
-        />
+        <div>
+          <label htmlFor="skills-textarea">Skills for this job position</label>
+          <Textarea
+            htmlId="skills-textarea"
+            getState={this.props.getState.skills}
+            handleStateChange={this.props.handleStateChange}
+            value={this.props.getState.skills.skillsList}
+            edit='skillsList'
+          />
+        </div>
       </div>
     );
   }

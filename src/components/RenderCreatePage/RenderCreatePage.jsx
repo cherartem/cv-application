@@ -38,7 +38,7 @@ class RenderCreatePage extends Component {
           <Main getState={this.state} handleStateChange={this.handleStateChange} />
         </div>
         <div className="showcase">
-          <div className="paper-sheet">
+          <div className="paper-sheet"> 
             <General data={this.state.general} />
             <Skills data={this.state.skills.skillsList} />
             <Education data={this.state.education} />

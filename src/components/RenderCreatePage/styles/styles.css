@@ -257,4 +257,110 @@ button#download-btn {
 
 button#download-btn:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.skills-form-menu,
+.general-form-menu,
+.ed-el,
+.w-el {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.skills-form-menu div,
+.general-form-menu div,
+.ed-el div,
+.w-el div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 100%;
+}
+
+.skills-form-menu div label,
+.general-form-menu div label,
+.ed-el div label,
+.w-el div label {
+  font-size: 2.2vh;
+  color: gray;
+}
+
+.ed-el div input,
+.general-form-menu div input,
+.skills-form-menu div textarea,
+.w-el div input,
+.w-el div textarea {
+  padding: 1.3vh;
+  border: none;
+  border-radius: 1vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-size: 2.2vh;
+  color: gray;
+}
+
+.skills-form-menu div textarea,
+.w-el div textarea {
+  height: 30vh;
+}
+
+.education-form-menu,
+.work-experience-form-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10vh;
+}
+
+button#new-ed-btn,
+button#new-w-btn {
+  padding: 0.8vw;
+  font-size: 1vw;
+  border: none;
+  border-radius: 0.8vw;
+  background: none;
+  border: 0.1vw solid royalblue;
+  color: royalblue;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+button#new-ed-btn:hover,
+button#new-w-btn:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.education-list,
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+.ed-container,
+.work-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+button#rm-ed-btn,
+button#rm-w-btn {
+  padding: 0.5vw;
+  font-size: 1vw;
+  border: none;
+  border-radius: 0.5vw;
+  background: none;
+  border: 0.1vw solid rgb(227, 42, 42);
+  color: rgb(227, 42, 42);
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+button#rm-ed-btn:hover,
+button#rm-w-btn:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }/*# sourceMappingURL=styles.css.map */

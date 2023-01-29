@@ -5,6 +5,7 @@ import { GeneralMenu } from "./GeneralMenu";
 import { ReturnButton } from "./ReturnButton";
 import { SkillsMenu } from "./SkillsMenu";
 import { WorkExperienceMenu } from "./WorkExperienceMenu";
+import ReactToPrint from "react-to-print";
 
 export class Main extends Component {
   constructor(props) {
@@ -24,7 +25,16 @@ export class Main extends Component {
         <div className="form-content">
           <h1>Set up your CV:</h1>
           <DefaultMenu changeState={this.handlePageStateChange} />
-          <button id="download-btn">Download your CV in PDF</button>
+          <ReactToPrint
+            trigger={() => {
+              return <button id="download-btn">Download your CV in PDF</button>
+            }}
+            content={() => document.querySelector('.paper-sheet')}
+            bodyClass="paper-sheet"
+            documentTitle='CV'
+            pageStyle='print'
+            copyStyles="true"
+          />
         </div>
       );
     } else if (this.state.page === 'general') {

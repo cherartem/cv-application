@@ -37,7 +37,7 @@ export class EducationMenu extends Component {
     return educationRef.map((education, index) => (
       <div key={education.id} className="ed-container">
         <EducationComponent index={index} getState={education} handleStateChange={this.props.handleStateChange} />
-        <button onClick={() => this.removeEdObj(index)}>Remove</button>
+        <button id="rm-ed-btn" onClick={() => this.removeEdObj(index)}>Remove</button>
       </div>
     ));
   }  
@@ -48,7 +48,7 @@ export class EducationMenu extends Component {
         <div className="education-list">
           {this.renderEdComponents()}
         </div>
-        <button onClick={this.newEdObj}>New</button>
+        <button id="new-ed-btn" onClick={this.newEdObj}>+ Add</button>
       </div>
     );
   }
